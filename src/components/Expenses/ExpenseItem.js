@@ -5,22 +5,21 @@ import "./ExpenseItem.css";
 import Card from "../UI/Card";
 
 function ExpenseItem(props) {
-
-  const [title, setTitle] = useState(props.title);
+  const [amount, setAmount] = useState(props.amount);
 
   const clickHandler = () => {
-    setTitle('Updated!!')
+    setAmount(100);
   };
 
   return (
     <Card className="expense-item">
       <ExpenseDate date={props.date} />
       <ExpenseDetails
-        amount={props.amount}
+        amount={amount}
         location={props.location}
-        title={title}
+        title={props.title}
       />
-      <button onClick={clickHandler}>Click here</button>
+      <button onClick={clickHandler}>Set expense to 100</button>
     </Card>
   );
 }
