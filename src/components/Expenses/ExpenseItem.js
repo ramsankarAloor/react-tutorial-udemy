@@ -16,7 +16,6 @@ function ExpenseItem(props) {
       <ExpenseDate date={props.date} />
       <ExpenseDetails
         amount={amount}
-        location={props.location}
         title={props.title}
       />
       <button onClick={clickHandler}>Set expense to 100</button>
