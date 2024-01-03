@@ -8,6 +8,7 @@ function Expenses(props) {
   const [filterdYear, setFilteredYear] = useState("2020");
   const expenseItems = props.items.map((expense) => (
     <ExpenseItem
+      key={expense.id}
       title={expense.title}
       amount={expense.amount}
       date={expense.date}
