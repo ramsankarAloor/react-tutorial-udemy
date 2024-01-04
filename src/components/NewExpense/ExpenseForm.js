@@ -31,6 +31,7 @@ function ExpenseForm(props) {
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");
+    props.onClose();
   };
 
   return (
@@ -52,6 +53,9 @@ function ExpenseForm(props) {
         <input type="date" value={enteredDate} onChange={dateChangeHandler} />
       </div>
       <div className="new-expense__actions">
+        <button type="button" onClick={props.onClose}>
+          Close
+        </button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
