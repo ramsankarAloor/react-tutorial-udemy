@@ -4,6 +4,7 @@ import { useState } from "react";
 
 function NewExpense(props) {
   const [isEditing, setIsEditing] = useState(false);
+  
   const saveExpenseDataHandler = (enteredExpenseData) => {
     const expenseData = {
       ...enteredExpenseData,
